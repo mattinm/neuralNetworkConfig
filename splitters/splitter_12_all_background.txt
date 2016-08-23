@@ -2,8 +2,8 @@
 1
 
 # species
-../data/intersects/2,1,1
-../data/intersects/1000000,2,1
+../data/intersects_12/2,1,1
+../data/intersects_12/1000000,2,1
 
 # backgrounds
 ../data/backgrounds,3,6

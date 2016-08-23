@@ -6,4 +6,4 @@
 ../data/intersects_128/1000000,2,32
 
 # backgrounds
-../data/backgrounds_small,3,32
+../data/background_small,3,32

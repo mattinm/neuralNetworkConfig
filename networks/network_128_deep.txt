@@ -1,10 +1,14 @@
-net.setActivType(LEAKY_RELU);   //128x128x3
-net.addConvLayer(32, 1, 3, 1);  //128x128x32
-net.addMaxPoolLayer(2,2);       //64x64x32
-net.addConvLayer(32, 1, 5, 0);  //60x60x32
-net.addMaxPoolLayer(2,2);       //30x30x32
-net.addConvLayer(64, 1, 3, 0);  //28x28x64
-net.addMaxPoolLayer(2,2);       //14x14x64
-net.addConvLayer(128, 1, 3, 0); //12x12x128
-net.addMaxPoolLayer(2,2);       //6x6x128
-net.addFullyConnectedLayer(3);  //1x1x3
+NET_CONFIG
+global_activ leaky_relu
+
+input 128x128x3
+conv numFil=32 filSize=3 pad=1 stride=1 128x128x32
+maxpool stride=2 pool=2 64x64x32
+conv numFil=32 filSize=5 pad=1 stride=0 60x60x32
+maxpool stride=2 pool=2 30x30x32
+conv numFil=64 filSize=3 pad=1 stride=0 28x28x64
+maxpool stride=2 pool=2 14x14x64
+conv numFil=128 filSize=3 pad=1 stride=0 12x12x128
+maxpool stride=2 pool=2 6x6x128
+fc 256 1x1x256
+fc 3 1x1x3
